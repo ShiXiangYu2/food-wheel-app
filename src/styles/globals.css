@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式变量 */
+:root {
+  --wheel-size: 300px;
+  --wheel-duration: 3s;
+}
+
+/* 自定义组件样式 */
+@layer components {
+  .wheel-container {
+    @apply relative flex items-center justify-center;
+  }
+  
+  .wheel-segment {
+    @apply absolute top-0 left-1/2 origin-bottom;
+    transform-origin: 0 var(--wheel-size);
+  }
+  
+  .wheel-pointer {
+    @apply absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1 z-10;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #dc2626;
+  }
+  
+  .recipe-card {
+    @apply bg-white rounded-lg shadow-md p-4 border border-gray-200 hover:shadow-lg transition-shadow;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium py-1 px-3 rounded text-sm transition-colors duration-200;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  :root {
+    --wheel-size: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --wheel-size: 200px;
+  }
+} 
