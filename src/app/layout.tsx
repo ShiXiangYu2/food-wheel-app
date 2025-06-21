@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 
+
 export const metadata: Metadata = {
   title: '今日吃啥转盘',
   description: '随机决定今天吃什么的转盘应用',
