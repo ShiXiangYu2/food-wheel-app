@@ -21,6 +21,7 @@ export default function WheelComponent({
     if (isSpinning && segments.length > 0) {
       startSpin();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSpinning, segments]);
 
   /**

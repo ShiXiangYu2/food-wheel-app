@@ -144,7 +144,7 @@ export default function RecipeManager({
                 <div className="text-gray-400 text-6xl mb-4">🍽️</div>
                 <p className="text-gray-500">还没有添加任何菜谱</p>
                 <p className="text-gray-400 text-sm mt-2">
-                  点击"流行菜谱"或"自定义添加"来添加菜谱
+                  点击&ldquo;流行菜谱&rdquo;或&ldquo;自定义添加&rdquo;来添加菜谱
                 </p>
               </div>
             ) : (
